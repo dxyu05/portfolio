@@ -47,14 +47,14 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Work Experience
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             My professional journey has been filled with exciting challenges and opportunities 
             to grow as a developer and team member.
           </p>
@@ -63,23 +63,23 @@ export function Experience() {
         {/* Experience Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200 lg:left-1/2 lg:transform lg:-translate-x-0.5" />
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-600 lg:left-1/2 lg:transform lg:-translate-x-0.5" />
           
           <div className="space-y-12">
             {experiences.map((experience, index) => (
               <div key={index} className="relative">
                 {/* Timeline dot */}
-                <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg lg:left-1/2 lg:transform lg:-translate-x-2" />
+                <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-800 shadow-lg lg:left-1/2 lg:transform lg:-translate-x-2" />
                 
                 {/* Content */}
                 <div className={`ml-16 lg:ml-0 ${index % 2 === 0 ? 'lg:mr-8 lg:text-right' : 'lg:ml-8'}`}>
-                  <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 border border-gray-200">
+                  <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-6 lg:p-8 border border-gray-200 dark:border-gray-600">
                     {/* Header */}
                     <div className="mb-4">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                         {experience.title}
                       </h3>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600 dark:text-gray-400">
                         <div className="flex items-center">
                           <Building className="h-4 w-4 mr-2" />
                           <span className="font-medium">{experience.company}</span>
@@ -96,18 +96,18 @@ export function Experience() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                       {experience.description}
                     </p>
 
                     {/* Achievements */}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Achievements:</h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, achievementIndex) => (
                           <li key={achievementIndex} className="flex items-start">
                             <span className="text-blue-500 mr-2 mt-1">•</span>
-                            <span className="text-gray-600 text-sm">{achievement}</span>
+                            <span className="text-gray-600 dark:text-gray-300 text-sm">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -115,7 +115,7 @@ export function Experience() {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Technologies Used:</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {experience.technologies.map((tech, techIndex) => (
                           <span
@@ -136,15 +136,13 @@ export function Experience() {
 
         {/* Download Resume CTA */}
         <div className="text-center mt-16">
-          <p className="text-gray-600 mb-4">
-            Want to see more details about my experience?
-          </p>
           <a
             href="/resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Download Full Resume
+            View Resume
           </a>
         </div>
       </div>

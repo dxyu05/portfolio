@@ -1,12 +1,12 @@
 import {
   Header,
   Hero,
+  About,
   Projects,
   Experience,
   Skills,
   Interests,
-  Contact,
-  Footer
+  Contact
 } from "@/components/site"
 
 export default function Home() {
@@ -15,13 +15,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Projects />
-        <Experience />
+        <About />
         <Skills />
+        <Experience />
+        <Projects />
         <Interests />
         <Contact />
       </main>
-      <Footer />
     </div>
   )
 }

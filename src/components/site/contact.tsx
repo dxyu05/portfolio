@@ -2,25 +2,26 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react"
+import emailjs from '@emailjs/browser'
 
 const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@yourname.com",
-    href: "mailto:hello@yourname.com"
+    value: "dxyy05@gmail.com",
+    href: "mailto:dxyy05@gmail.com"
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567"
+    value: "+1 (240) 506-9631",
+    href: "tel:+12405069631"
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "San Francisco, CA",
+    value: "Rockville, MD",
     href: "#"
   }
 ]
@@ -29,27 +30,15 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/yourusername",
+    href: "https://github.com/dxyu05",
     color: "hover:bg-gray-900"
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://linkedin.com/in/danielyu-05",
     color: "hover:bg-blue-600"
   },
-  {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/yourusername",
-    color: "hover:bg-blue-400"
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    href: "https://instagram.com/yourusername",
-    color: "hover:bg-pink-600"
-  }
 ]
 
 export function Contact() {
@@ -65,18 +54,28 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
-    
-    // Show success message (you can implement a toast notification here)
-    alert("Thank you for your message! I'll get back to you soon.")
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, // EmailJS service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // EmailJS template ID
+        e.target as HTMLFormElement,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! // EmailJS public key
+      )
+      
+      console.log('Email sent successfully:', result.text)
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      
+      // Show success message
+      alert("Thank you for your message! I'll get back to you soon.")
+    } catch (error) {
+      console.error('Email send failed:', error)
+      alert("Sorry, there was an error sending your message. Please try again or email me directly at dxyy05@gmail.com")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,10 +106,6 @@ export function Contact() {
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Let's Connect
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                I'm currently available for freelance work and full-time opportunities. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-              </p>
             </div>
 
             {/* Contact Details */}
@@ -135,7 +130,7 @@ export function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Socials</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -158,20 +153,20 @@ export function Contact() {
                 <span className="font-semibold text-gray-900 dark:text-white">Available for opportunities</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                I'm currently accepting new projects and full-time opportunities. 
+                I'm currently looking for new internship opportunities and projects to work on. 
                 Let's discuss how I can help bring your ideas to life!
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               Send a Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
@@ -183,7 +178,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="Your name"
                   />
                 </div>
@@ -199,7 +194,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -216,7 +211,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="What's this about?"
                 />
               </div>
@@ -231,9 +226,9 @@ export function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  placeholder="Tell me about your project or opportunity..."
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  placeholder="Your Message"
                 />
               </div>
 
@@ -256,31 +251,7 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 border border-purple-100 dark:border-purple-800">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Ready to Start a Project?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-              I'm excited to hear about your ideas and help bring them to life. 
-              Let's create something amazing together!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="mailto:hello@yourname.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Start a Conversation
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/resume.pdf" download>
-                  Download Resume
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   )

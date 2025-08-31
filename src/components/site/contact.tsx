@@ -94,8 +94,7 @@ export function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I'm always interested in hearing about new opportunities and exciting projects. 
-            Let's discuss how we can work together!
+            Have an idea or opportunity in mind or just want to say hi? Feel free to reach out! I would love to hear from you!
           </p>
         </div>
 

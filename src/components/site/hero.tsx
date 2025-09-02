@@ -141,19 +141,19 @@ export function Hero() {
     
     const snowflakeShapes = [
       // Simple snowflake
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-falling-snow ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L50 100M0 50L100 50M25 25L75 75M75 25L25 75" stroke="currentColor" strokeWidth="3" fill="none"/>
         </svg>
       ),
       // Star snowflake
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-falling-snow ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z" fill="currentColor"/>
         </svg>
       ),
       // Crystal snowflake
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-falling-snow ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L55 20L75 25L55 30L50 50L45 30L25 25L45 20L50 0Z" fill="currentColor"/>
           <path d="M50 50L55 70L75 75L55 80L50 100L45 80L25 75L45 70L50 50Z" fill="currentColor"/>

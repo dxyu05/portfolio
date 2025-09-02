@@ -103,7 +103,7 @@ export function Contact() {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
             </div>
 
@@ -152,8 +152,8 @@ export function Contact() {
                 <span className="font-semibold text-gray-900 dark:text-white">Available for opportunities</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                I'm currently looking for new internship opportunities and projects to work on. 
-                Let's discuss how I can help bring your ideas to life!
+                I&apos;m currently looking for new internship opportunities and projects to work on. 
+                Let&apos;s discuss how I can help bring your ideas to life!
               </p>
             </div>
           </div>
@@ -211,7 +211,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
 

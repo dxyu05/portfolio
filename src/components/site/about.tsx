@@ -35,7 +35,7 @@ export function About() {
           <div className="space-y-6 lg:col-span-3">
             <div className="space-y-4">
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                Hello! I'm Daniel Yu, a junior at the University of Maryland, College Park studying Computer Science and Applied Mathematics.
+                Hello! I&apos;m Daniel Yu, a junior at the University of Maryland, College Park studying Computer Science and Applied Mathematics.
                 This past summer I had the opportunity to intern at Workday as a part of their Enterprise Identity Team, focusing on 
                 Identity and Access Management. At school, I am involved with a club called Hack4Impact, where I help build software for non-profits.
               </p>

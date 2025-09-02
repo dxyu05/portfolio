@@ -1,4 +1,4 @@
-import { Code, Database, Palette, Server, Smartphone, Globe, Languages } from "lucide-react"
+import { Code, Database, Server, Globe, Languages } from "lucide-react"
 
 const skillCategories = [
   {

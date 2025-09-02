@@ -1,4 +1,4 @@
-import { BookOpen, Camera, Coffee, Gamepad2, Music, Plane, Utensils, Users, Circle } from "lucide-react"
+import { BookOpen, Coffee, Gamepad2, Music, Plane, Users, Circle } from "lucide-react"
 
 const interests = [
   {
@@ -51,23 +51,7 @@ const interests = [
   }
 ]
 
-const currentInterests = [
-  {
-    title: "Learning Spanish",
-    description: "Currently taking Spanish lessons to better connect with the global developer community.",
-    progress: 60
-  },
-  {
-    title: "Contributing to Open Source",
-    description: "Actively contributing to various open-source projects and maintaining a few of my own.",
-    progress: 80
-  },
-  {
-    title: "Building a Smart Home",
-    description: "Experimenting with IoT devices and home automation using Raspberry Pi and various sensors.",
-    progress: 45
-  }
-]
+
 
 export function Interests() {
   return (

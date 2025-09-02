@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Github, ArrowRight } from "lucide-react"
+import { Github } from "lucide-react"
 
 const projects = [
   {
@@ -48,9 +48,9 @@ export function Projects() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Projects
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on and am currently working on!
-          </p>
+                      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Here are some of the projects I&apos;ve worked on and am currently working on!
+            </p>
         </div>
 
         {/* Projects Grid */}

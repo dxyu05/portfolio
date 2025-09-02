@@ -22,7 +22,7 @@ const interests = [
   {
     title: "Gaming",
     icon: Gamepad2,
-    description: "Gaming helps me stay creative and problem-solve. I enjoy playing FPS, MOBA, andcasual games such as Valorant, LoL, and Minecraft.",
+    description: "Gaming helps me stay creative and problem-solve. I enjoy playing FPS, MOBA, and casual games such as Valorant, LoL, and Minecraft.",
     color: "from-green-500 to-green-600"
   },
   {

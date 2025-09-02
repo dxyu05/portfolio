@@ -22,17 +22,19 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#home" className="-m-1.5 p-1.5 flex items-center gap-4">
-            <span className="text-xl font-bold text-gray-900 dark:text-white">Daniel Yu</span>
+          <div className="flex items-center gap-4">
+            <a href="#home" className="-m-1.5 p-1.5">
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Daniel Yu</span>
+            </a>
             <a 
-              href="https://github.com/dxyu05" 
+              href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <Github className="h-5 w-5" />
             </a>
-          </a>
+          </div>
         </div>
         <div className="flex lg:hidden">
           <Button
@@ -67,17 +69,19 @@ export function Header() {
           <div className="fixed inset-0 z-50" />
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:ring-gray-100/10">
             <div className="flex items-center justify-between">
-                        <a href="#home" className="-m-1.5 p-1.5 flex items-center gap-4">
-            <span className="text-xl font-bold text-gray-900 dark:text-white">Daniel Yu</span>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-          </a>
+              <div className="flex items-center gap-4">
+                <a href="#home" className="-m-1.5 p-1.5">
+                  <span className="text-xl font-bold text-gray-900 dark:text-white">Daniel Yu</span>
+                </a>
+                <a 
+                  href="https://github.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+              </div>
               <Button
                 variant="ghost"
                 size="sm"

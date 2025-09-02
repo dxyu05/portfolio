@@ -21,21 +21,21 @@ const projects = [
     description: "A website designed for lookup of a player's career stats. Utilizes a RESTful Flask API to fetch and format data from the MLB API.",
     image: "/project2.jpg",
     technologies: ["Next.js", "Tailwind CSS", "Flask", "Python"],
-    github: "https://github.com",
+    github: "https://github.com/dxyu05/baseball",
   },
   {
     title: "Reddit Student Sentiment",
     description: "A data analysis project examining correlations between student political views and opinions on Reddit posts using Python, Pandas, and visualization tools.",
     image: "/project3.jpg",
     technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
-    github: "https://github.com",
+    github: "https://github.com/dxyu05/reddit-analysis",
   },
   {
     title: "White House Reel Generator",
     description: "A tool that generates reels on the latest news from the White House. Scrapes whitehouse.gov to get the latest news from the administration and uses gen ai along with other tools to generate fun and engaging reels.",
     image: "/project4.jpg",
     technologies: ["Python", "Selenium", "Google Generative AI",  "MoviePy"],
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com",
   },
 ]
 

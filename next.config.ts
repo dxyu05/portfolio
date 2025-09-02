@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Remove static export to preserve JavaScript functionality
+  output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true
-  }
+  },
+  // Ensure JavaScript is included in static export
+  distDir: 'out',
+  assetPrefix: '',
+  basePath: ''
 };
 
 export default nextConfig;

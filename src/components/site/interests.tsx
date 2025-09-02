@@ -22,7 +22,7 @@ const interests = [
   {
     title: "Gaming",
     icon: Gamepad2,
-    description: "Gaming helps me stay creative and problem-solve. I enjoy playing competitive tools .",
+    description: "Gaming helps me stay creative and problem-solve. I enjoy playing competitive games such as League of Legends, but also casual games such as Minecraft and Pokemon (I love Gen 5).",
     color: "from-green-500 to-green-600"
   },
   {
@@ -34,7 +34,7 @@ const interests = [
   {
     title: "Travel",
     icon: Plane,
-    description: "Exploring new places and cultures inspires my creativity. I've visited 15+ countries and counting.",
+    description: "Exploring new places and cultures inspires my creativity. I've visited 4 countries outside the US and hope to travel more in the future.",
     color: "from-indigo-500 to-indigo-600"
   },
   {

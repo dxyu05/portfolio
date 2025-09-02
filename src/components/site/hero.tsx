@@ -3,6 +3,16 @@
 import { ChevronDown } from "lucide-react"
 import { useState, useEffect, useCallback, useMemo } from "react"
 
+interface SnowflakeProps {
+  color: string;
+  style: React.CSSProperties;
+}
+
+interface LeafProps {
+  color: string;
+  style: React.CSSProperties;
+}
+
 export function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [currentText, setCurrentText] = useState("")
@@ -73,31 +83,31 @@ export function Hero() {
     
     const leafShapes = [
       // Maple leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-falling-leaves ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C60 15 80 25 90 40C95 50 90 60 80 70C70 80 60 85 50 90C40 85 30 80 20 70C10 60 5 50 10 40C20 25 40 15 50 0Z" />
         </svg>
       ),
       // Oak leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-falling-leaves ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C60 10 75 20 85 35C90 45 85 55 75 65C65 75 55 80 50 85C45 80 35 75 25 65C15 55 10 45 15 35C25 20 40 10 50 0Z" />
         </svg>
       ),
       // Simple rounded leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-falling-leaves ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C70 20 80 40 70 60C60 80 40 90 50 100C60 90 80 80 90 60C100 40 90 20 70 0C60 10 50 0 50 0Z" />
         </svg>
       ),
       // Elongated leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-falling-leaves ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C65 15 80 30 85 50C80 70 65 85 50 100C35 85 20 70 15 50C20 30 35 15 50 0Z" />
         </svg>
       ),
       // Heart-shaped leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-falling-leaves ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C60 20 80 30 85 50C80 70 60 80 50 100C40 80 20 70 15 50C20 30 40 20 50 0Z" />
         </svg>
@@ -150,7 +160,7 @@ export function Hero() {
         </svg>
       ),
       // Diamond snowflake
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-falling-snow ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L100 50L50 100L0 50Z" fill="currentColor"/>
         </svg>
@@ -185,19 +195,19 @@ export function Hero() {
     
     const swayShapes = [
       // Maple leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-leaf-sway ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C60 15 80 25 90 40C95 50 90 60 80 70C70 80 60 85 50 90C40 85 30 80 20 70C10 60 5 50 10 40C20 25 40 15 50 0Z" />
         </svg>
       ),
       // Simple rounded leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-leaf-sway ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C70 20 80 40 70 60C60 80 40 90 50 100C60 90 80 80 90 60C100 40 90 20 70 0C60 10 50 0 50 0Z" />
         </svg>
       ),
       // Oak leaf
-      (props: any) => (
+      (props: LeafProps) => (
         <svg className={`absolute animate-leaf-sway ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0C60 10 75 20 85 35C90 45 85 55 75 65C65 75 55 80 50 85C45 80 35 75 25 65C15 55 10 45 15 35C25 20 40 10 50 0Z" />
         </svg>
@@ -230,13 +240,13 @@ export function Hero() {
     
     const swaySnowShapes = [
       // Simple cross
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-snow-sway ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L50 100M0 50L100 50" stroke="currentColor" strokeWidth="2" fill="none"/>
         </svg>
       ),
       // Small star
-      (props: any) => (
+      (props: SnowflakeProps) => (
         <svg className={`absolute animate-snow-sway ${props.color}`} style={props.style} viewBox="0 0 100 100">
           <path d="M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z" fill="currentColor"/>
         </svg>
@@ -296,7 +306,7 @@ export function Hero() {
           {/* Greeting */}
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="text-blue-600 dark:text-amber-400">Hi! I'm, </span>
+              <span className="text-blue-600 dark:text-amber-400">Hi! I&apos;m, </span>
               <span className="text-slate-700 dark:text-orange-300">Daniel Yu</span>
             </h1>
             <h2 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-cyan-600 dark:text-red-400 tracking-tight min-h-[1.2em]">

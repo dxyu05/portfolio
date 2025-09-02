@@ -17,7 +17,12 @@ export const metadata: Metadata = {
   title: "Daniel Yu - Portfolio",
   description: "Full Stack Developer passionate about creating exceptional digital experiences",
   icons: {
-    icon: ["/favicon.svg", "/favicon.ico"],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", type: "image/x-icon" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico"
   },
 };
 

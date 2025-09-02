@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
+  title: "Daniel Yu - Portfolio",
   description: "Full Stack Developer passionate about creating exceptional digital experiences",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

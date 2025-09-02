@@ -12,23 +12,17 @@ export function About() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Photo Section */}
           <div className="relative lg:col-span-2">
             <div className="relative z-10">
               {/* Main Photo */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ height: '400px' }}>
-                <div className="h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center">
-                  {/* Placeholder for photo - replace with actual image */}
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                      <span className="text-4xl font-bold text-white">DY</span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      Photo placeholder - add your photo here
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src="/image.jpg" 
+                  alt="Daniel Yu" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Decorative elements */}
@@ -62,5 +56,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+   )
 }

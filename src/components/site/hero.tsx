@@ -14,7 +14,7 @@ export function Hero() {
     "Engineer",
     "Student", 
     "Pickleballer",
-    "Dog Owner",
+    "Dog Lover",
     "Music Lover",
     "Gamer",
   ], [])

@@ -28,7 +28,7 @@ const interests = [
   {
     title: "Music",
     icon: Music,
-    description: "Music is my constant companion while coding. I listen to everything from classical to electronic, jazz to rock.",
+    description: "Music is one of my favorite things about life. I listen to everything from classical to electronic, jazz to rock.",
     color: "from-pink-500 to-pink-600"
   },
   {

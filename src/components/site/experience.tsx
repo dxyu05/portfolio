@@ -2,6 +2,12 @@ import { Calendar, Building } from "lucide-react"
 
 const experiences = [
   {
+    title: "Microsoft Global Hackathon Participant",
+    company: "Microsoft",
+    period: "Sep 2025",
+    description: "Participated in the Microsoft Global Hackathon as a member of Hack4Impact-UMD team. Worked on an ap for Rise DC which allows users to create accessible schedules for young.",
+  },
+  {
     title: "Cybersecurity Engineering Intern",
     company: "Workday",
     period: "May 2025 - Aug 2025",

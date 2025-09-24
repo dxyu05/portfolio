@@ -5,7 +5,7 @@ const experiences = [
     title: "Microsoft Global Hackathon Participant",
     company: "Microsoft",
     period: "Sep 2025",
-    description: "Participated in the Microsoft Global Hackathon as a member of Hack4Impact-UMD team. Worked on an ap for Rise DC which allows users to create accessible schedules for young.",
+    description: "Participated in the Microsoft Global Hackathon as a member of the Hack4Impact-UMD team. Worked on an ap for Rise DC which allows users to create accessible schedules for young. You can check out the repo here.",
   },
   {
     title: "Cybersecurity Engineering Intern",
@@ -68,7 +68,22 @@ export function Experience() {
 
                     {/* Description */}
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                      {experience.description}
+                      {experience.title === "Microsoft Global Hackathon Participant" ? (
+                        <>
+                          Participated in the Microsoft Global Hackathon as a member of the Hack4Impact-UMD team. Worked on an app for Rise DC which allows users to create accessible schedules for young adults with disabilities. You can check out the repo{" "}
+                          <a 
+                            href="https://github.com/Hack4Impact-UMD/microsoft-hackathon-fall25" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline"
+                          >
+                            here
+                          </a>
+                          .
+                        </>
+                      ) : (
+                        experience.description
+                      )}
                     </p>
                   </div>
                 </div>

@@ -146,7 +146,7 @@ export function Contact() {
             </div>
 
             {/* Availability Status */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800">
+            {/* <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800">
               <div className="flex items-center mb-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse" />
                 <span className="font-semibold text-gray-900 dark:text-white">Available for opportunities</span>
@@ -155,7 +155,7 @@ export function Contact() {
                 I&apos;m currently looking for new internship opportunities and projects to work on. 
                 Let&apos;s discuss how I can help bring your ideas to life!
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}

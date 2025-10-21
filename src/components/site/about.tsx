@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 export function About() {
   return (
@@ -18,10 +18,12 @@ export function About() {
             <div className="relative z-10">
               {/* Main Photo */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ height: '400px' }}>
-                <img 
+                <Image
                   src="/image.jpg" 
                   alt="Daniel Yu" 
                   className="w-full h-full object-cover"
+                  width={400}
+                  height={400}
                 />
               </div>
               

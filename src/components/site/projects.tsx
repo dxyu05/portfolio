@@ -3,18 +3,18 @@ import { Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Goal Streaks!",
-    description: "Currently working on a tool to track daily goals, but also provide features to help with motivation and accountability. Main selling point is having friends and streaks!",
+    title: "Spotify Activity Tracker",
+    description: "Currently working on a tool to track Spotify activity using Kafka and MongoDB to track user activity and store it in a database.",
     image: "/project1.jpg",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Java", "Spring Boot"],
-    github: "https://github.com",
+    technologies: ["Java", "Spring Boot", "MongoDB", "Kafka", "Spotify API"],
+    github: "https://github.com/dxyu05",
   },
   {
     title: "Canvas Helper",
     description: "Currently working on a tool to sync Canvas assignments with Google Calendar.",
     image: "/project1.jpg",
     technologies: ["Next.js", "TypeScript", "Canvas API", "Google Calendar API"],
-    github: "https://github.com",
+    github: "https://github.com/dxyu05",
   },
   {
     title: "MLB Stats Tracker",
@@ -24,7 +24,7 @@ const projects = [
     github: "https://github.com/dxyu05/baseball",
   },
   {
-    title: "Reddit Student Sentiment",
+    title: "Reddit Student Sentiment Analysis",
     description: "A data analysis project examining correlations between student political views and opinions on Reddit posts using Python, Pandas, and visualization tools.",
     image: "/project3.jpg",
     technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
@@ -35,7 +35,7 @@ const projects = [
     description: "A tool that generates reels on the latest news from the White House. Scrapes whitehouse.gov to get the latest news from the administration and uses gen ai along with other tools to generate fun and engaging reels.",
     image: "/project4.jpg",
     technologies: ["Python", "Selenium", "Google Generative AI",  "MoviePy"],
-    github: "https://github.com",
+    github: "https://github.com/dxyu05",
   },
 ]
 
@@ -59,14 +59,8 @@ export function Projects() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 h-96 flex flex-col"
+                className="group bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 flex flex-col"
               >
-                <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Project Image</span>
-                  </div>
-                </div>
                 
                 <div className="p-4 flex flex-col flex-1">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -77,7 +71,7 @@ export function Projects() {
                   </p>
                   
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                    {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
                         className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full"
@@ -85,11 +79,6 @@ export function Projects() {
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
                   </div>
                   
                   <div className="flex gap-2 mt-auto">

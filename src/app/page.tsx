@@ -8,10 +8,12 @@ import {
   Interests,
   Contact
 } from "@/components/site"
+import { ScrollTitleUpdater } from "@/components/scroll-title-updater"
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <ScrollTitleUpdater />
       <Header />
       <main>
         <Hero />

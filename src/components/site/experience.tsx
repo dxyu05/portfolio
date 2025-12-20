@@ -2,12 +2,6 @@ import { Calendar, Building } from "lucide-react"
 
 const experiences = [
   {
-    title: "Microsoft Global Hackathon Participant",
-    company: "Microsoft",
-    period: "Sep 2025",
-    description: "Participated in the Microsoft Global Hackathon as a member of the Hack4Impact-UMD team. Worked on an ap for Rise DC which allows users to create accessible schedules for young. You can check out the repo here.",
-  },
-  {
     title: "Cybersecurity Engineering Intern",
     company: "Workday",
     period: "May 2025 - Aug 2025",
@@ -17,7 +11,7 @@ const experiences = [
     title: "Software Engineer",
     company: "Hack4Impact",
     period: "Aug 2024 - Present",
-    description: "Building software for non-profits as part of the University of Maryland chapter. Collaborating with team members to deliver impactful solutions for social good organizations. Was an engineer on Food For All DC and a project to revamp an internal application system."
+    description: "Building software for non-profits as part of the University of Maryland chapter. ="
   },
   {
     title: "Panda Programmer",

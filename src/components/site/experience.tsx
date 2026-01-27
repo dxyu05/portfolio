@@ -2,6 +2,12 @@ import { Calendar, Building } from "lucide-react"
 
 const experiences = [
   {
+    title: "Software Engineer Intern",
+    company: "Roblox",
+    period: "May 2026 - Aug 2026",
+    description: "Incoming Roblox Software Engineer Intern."
+  },
+  {
     title: "Cybersecurity Engineering Intern",
     company: "Workday",
     period: "May 2025 - Aug 2025",
@@ -11,7 +17,7 @@ const experiences = [
     title: "Software Engineer",
     company: "Hack4Impact",
     period: "Aug 2024 - Present",
-    description: "Building software for non-profits as part of the University of Maryland chapter. ="
+    description: "Building software for non-profits as part of the University of Maryland chapter."
   },
   {
     title: "Panda Programmer",

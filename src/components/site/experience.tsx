@@ -48,7 +48,7 @@ export function Experience() {
               <div key={index} className="relative flex items-start">
                 {/* Content */}
                 <div className="ml-8">
-                  <div className="bg-white dark:bg-gray-700 rounded-xl shadow-md p-4 border border-gray-200 dark:border-gray-600 max-w-md">
+                  <div className="bg-white dark:bg-gray-700 rounded-xl shadow-md p-4 border border-gray-200 dark:border-gray-600 w-96">
                     {/* Header */}
                     <div className="mb-3">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">

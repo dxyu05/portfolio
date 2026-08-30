@@ -96,7 +96,6 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-medium tracking-widest pt-6">
             {[
               { label: "LinkedIn", href: "https://www.linkedin.com/in/daniel-yu05/" },
-              { label: "Resume", href: "/resume.pdf" },
               { label: "Email", href: "mailto:dxyy05@gmail.com" },
               { label: "GitHub", href: "https://github.com/dxyu05" },
             ].map((link) => (
@@ -104,8 +103,8 @@ export default function Home() {
                 key={link.label}
                 href={link.href}
                 className="text-zinc-500 hover:text-primary transition-all duration-300 uppercase relative group"
-                target={link.href.startsWith('http') || link.label === "Resume" ? "_blank" : undefined}
-                rel={link.href.startsWith('http') || link.label === "Resume" ? "noopener noreferrer" : undefined}
+                target={link.href.startsWith('http') ? "_blank" : undefined}
+                rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"></span>

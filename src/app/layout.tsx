@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
-const outfit = Outfit({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-space-grotesk",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Daniel Yu - Portfolio",
-  description: "Full Stack Developer passionate about creating exceptional digital experiences",
+  title: "Daniel Yu — Software Engineer",
+  description:
+    "Daniel Yu is a Computer Science and Applied Mathematics student at the University of Maryland focused on reliable software, distributed systems, and cybersecurity.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -23,14 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body
-        className={`${outfit.variable} font-sans antialiased`}
-        suppressHydrationWarning
-      >
-        <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${spaceGrotesk.variable} ${geistMono.variable} font-sans antialiased`}>
+        {children}
         <Analytics />
       </body>
     </html>

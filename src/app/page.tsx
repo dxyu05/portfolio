@@ -1,3 +1,5 @@
+import { SpotifyTopArtists } from "@/components/spotify-top-artists";
+
 // Keep projects off the public site until their write-ups are ready.
 const showProjects = false;
 
@@ -123,6 +125,8 @@ export default function Home() {
           or following baseball, or rock climbing!
         </p>
       </section>
+
+      <SpotifyTopArtists />
 
       <section aria-labelledby="experience-heading" className="mt-12">
         <div className="mb-4 flex items-baseline justify-between">
